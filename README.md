@@ -51,6 +51,27 @@ ReactGA.event({
   nonInteraction: true, // optional, true/false
   transport: "xhr", // optional, beacon/xhr/image
 });
+
+
+// Send a custom purchase event
+
+ReactGA.event('purchase', {
+  category: 'purchase',
+  action: 'action',
+  transaction_id: 'transaction_id', // optional
+  value: 0.00, // optional, must be a number
+  tax: 0.00,  // optional, must be a number
+  currency: 'USD',
+  items: [ {
+    item_name: string,  // optional
+    item_id: string,  // optional
+    item_category: string,  // optional
+    price: 0.00, // must be a number
+    quantity: 1,
+    affiliation: string, // optional
+  } ], // optional array of items
+  transport: 'xhr',
+});
 ```
 
 ## Reference
