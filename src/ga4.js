@@ -29,12 +29,26 @@ https://developers.google.com/tag-platform/gtagjs/reference
  */
 
 /**
+ * @typedef ItemOptions
+ * @type {Object}
+ * @property {string} [item_name]
+ * @property {string} [item_category]
+ * @property {string} [item_id]
+ * @property {number} price
+ * @property {string} [affiliation]
+ * @property {number} quantity
+ */
+/**
  * @typedef UaEventOptions
  * @type {Object}
  * @property {string} action
  * @property {string} category
  * @property {string} [label]
  * @property {number} [value]
+ * @property {string} [transaction_id]
+ * @property {number} [tax]
+ * @property {string} [currency]
+ * @property {ItemOptions} [items]
  * @property {boolean} [nonInteraction]
  * @property {('beacon'|'xhr'|'image')} [transport]
  */
